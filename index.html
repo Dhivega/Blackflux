@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Company</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>NEW BUSINESS</h1>
+    </div>
+    <form id="myForm">
+        <div class = "info"> 
+        <h3>Name: <input class="c1" type="text" name="Name" id="Name" ></h3>
+        <h3>Email : <input class="c1" type="email" name="email id" id="email id"></h3>
+        <h3>Phone : <input class="c1" type="tel" name="phone no" id="phone no" maxlength="10" ></h3>
+        <h3>Website : <input class="c1" type="text" name="Website" id="website" ></h3>
+        <h3>Contact Name : <input class="c1" type="text" name="Name" id="name"></h3>
+        <h3>Contact Phone: <input class="c1" type="tel" name="phone" id="phone" maxlength="10"></h3>
+        
+        <div class="radio" id="rad1">
+        <h3>Types:</h3>
+        <input type="radio" name="types" id="Small Business" value="Small Business">
+        <label for="Small Business">Small Business</label><br>
+        <input type="radio" name="types" id="Enterprise" value="Enterprise">
+        <label for="Enterprise">Enterprise</label><br>
+        <input type="radio" name="types" id="Entrepreneur" value="Entrepreneur">
+        <label for="Entrepreneur">Entrepreneur</label><br>
+        </div>
+       <br>
+       <h4 id="error"></h4>
+        <div class="category" id="cat">
+            <label for="Merchant Info">Choose:</label>
+            <select name="category" id="Merchant Info">
+                <option value="Clothes" id="clothes">Clothes</option>
+                <option value="Toys"id="Toys">Toys</option>
+                <option value="Groceries" id="Groceries">Groceries</option>
+                <option value="Electronics" id="Electronics">Electronics</option>
+                <option value="Digital" id="Digital">Digital</option>
+              </select>
+        </div>
+        <h3>Active Form: <input type="date" name="date" id="date"></h3>
+        <h3>Logo: <input type="file" name="img" id="img"></h3>
+        <div class="notes">
+            <h3>Notes:</h3><textarea id="txt"></textarea>
+        </div>
+        
+        <p><input type="checkbox" value="checkbox" id="checkbox">To represent whether the account is critical so that we can provide extra care in case of any queries</p><br>
+        <div class="payment options">
+            <label for="Payment">Choose:</label>
+            <select name="category" id="payment">
+                <option value="UPI" id="UPI">UPI</option>
+                <option value="Cash On Delivery"id="Cash On Delivery">Cash On Delivery</option>
+                <option value="Card Payment" id="Card Payment">Card Payment</option>
+
+              </select>
+        </div>
+        </div>
+        <div class="submit">
+           <button type="button">SUBMIT</button>
+        </div>
+    </form>
+
+    <script>
+
+       
+            var form=document.getElementById('myForm')
+            form.addEventListener('submit',function(event){
+                event.preventDefault()
+            var name1=document.getElementById('Name').value
+            console.log(name1)
+            var name2=document.getElementById('email id').value
+            console.log(name2)
+            var name3=document.getElementById('phone no').value
+            console.log(name3)
+            var name4=document.getElementById('website').value
+            console.log(name4)
+            var name5=document.getElementById('name').value
+            console.log(name5)
+            var name6=document.getElementById('phone').value
+            console.log(name6)
+            if(document.getElementById("Small Business").checked==true)
+                document.write("Small business");
+            else if(document.getElementById("Enterprise").checked==true)
+                document.write("Enterprise");
+            else if(document.getElementById("Entrepreneur").checked==true)
+                document.write("Entrepreneur");
+            else{
+                document.write("not selected");
+            }
+           
+
+        
+
+            var name9=document.getElementById('date').value
+            console.log(name9)
+            var name10=document.getElementById('img').value
+            console.log(name10)
+            var name11=document.getElementById('txt').value
+            console.log(name11)
+            var name12=document.getElementById('checkbox').value
+            console.log(name12)
+            var name131=document.getElementById('Cash On Delivery ').value
+            console.log(name131)
+            var name132=document.getElementById('UPI').value
+            console.log(name132)
+            var name133=document.getElementById('Card Payment').value
+            console.log(name133)
+
+            });
+        
+            // function f1(){
+            //     var rad1=document.getElementById("Small Business");
+            //     var rad1=document.getElementById("Enterprise");
+            //     var rad1=document.getElementById("Entrepreneur");
+            //     if(rad1.checked==true){
+            //         console.log("Small Business")
+            //     }
+            //     else if(rad2.checked==true){
+            //         console.log("Enterprise")
+            //     }
+            //     else
+            //         console.log("Entrepreneur")
+            // }
+        
+    </script>
+</body>
+</html>
